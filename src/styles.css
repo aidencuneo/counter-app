@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    background: #eeeeee;
+    color: #121212;
+    font-family: 'Cal Sans', sans-serif;
+    font-size: 18px;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+#app {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#page-links {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 22px;
+}
+
+#page-links div {
+    padding: 15px;
+    user-select: none;
+    width: 100%;
+}
+
+#counters {
+    display: flex;
+    flex-direction: column;
+}
+
+.counter {
+    display: flex;
+    justify-content: space-between;
+    background: #a9d4ff;
+    padding: 15px 15px;
+    user-select: none;
+}
+
+.counter div {
+    margin: auto 0;
+}
+
+.counter .value-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.counter .value-container div {
+    display: inline;
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.counter .value-container .value {
+    width: 60px;
+}
+
+.delete-icon {
+    vertical-align: middle;
+    padding-bottom: 0.11em;
+    padding-right: 10px;
+    font-size: 24px;
+}
+
+.button {
+    background: #25dc7b;
+    padding: 15px 30px;
+    user-select: none;
+    /* width: 100%; */
+}
+
+select {
+    /* all: inherit; */
+    font: inherit;
+    width: 100%;
+    background: #a9d4ff;
+    padding: 15px;
+    user-select: none;
+    appearance: none;
+    border: none;
+}
+
+select#timeSelector {
+    background: #25dc7b;
+}
+
+select.date-selector {
+    text-align: center;
+    font-size: 22px;
+    /* font-weight: bold; */
+}
+
+div.info-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+div.button-container {
+    display: flex;
+}
+
+div.button-container .button {
+    flex-grow: 1;
+}

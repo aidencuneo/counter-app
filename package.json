@@ -1,0 +1,24 @@
+{
+  "name": "counter",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel --open",
+    "build": "parcel build --dist-dir /var/www/aidenbc.com.au/apps/counter --public-url=/apps/counter",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": "",
+  "devDependencies": {
+    "chart.js": "^4.5.0",
+    "parcel": "^2.15.4",
+    "regression": "^2.0.1"
+  },
+  "dependencies": {
+    "@fontsource/cal-sans": "^5.2.2",
+    "@fontsource/material-icons": "^5.2.5"
+  }
+}

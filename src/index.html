@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" type="module" defer></script>
+</head>
+<body>
+  <div id="page-links">
+    <div onclick="loadCountersPage(this)">Counters</div>
+    <div onclick="loadStatsPage(this)">Stats</div>
+  </div>
+
+  <div id="app">
+    <div style="display: flex">
+      <!-- <div class="button" style="background: #a9d4ff; font-size: 22px; width: 100%;">Date:</div> -->
+      <select id="yearSelector" class="date-selector" onchange="dateChanged()"></select>
+      <select id="monthSelector" class="date-selector" onchange="dateChanged()"></select>
+      <select id="daySelector" class="date-selector" onchange="dateChanged()"></select>
+    </div>
+    <div id="countersDiv"></div>
+    <div class="button" onclick="addCounter()">Add Counter</div>
+  </div>
+
+  <div id="stats">
+    <select id="nameSelector" onchange="drawStats()"></select>
+    <select id="timeSelector" onchange="drawStats()" value="7days">
+      <option value="3days">Previous 3 days</option>
+      <option value="7days">Previous 7 days</option>
+      <option value="14days">Previous 14 days</option>
+      <option value="thismonth">This month</option>
+      <option value="lastmonth">Last month</option>
+      <option value="30days">Previous 30 days</option>
+      <option value="90days">Previous 90 days</option>
+      <option value="thisyear">This year</option>
+      <option value="lastyear">Last year</option>
+      <option value="1year">Previous year</option>
+      <option value="2years">Previous two years</option>
+      <option value="alltime">All time</option>
+    </select>
+
+    <canvas id="statsCanvas"></canvas>
+
+    <div class="info-container">
+      <div id="totalStatDiv">Total: 0</div>
+      <div id="averageStatDiv">Average: 0</div>
+      <div id="maxStatDiv">Max: 0</div>
+      <div id="gradientStatDiv">Gradient: +0</div>
+    </div>
+
+    <div class="button-container">
+      <input type="file" accept="application/json" id="fileInput" style="display: none" onchange="importData()">
+      <div class="button" style="background: #a9d4ff" onclick="importPrompt()">Import counter data</div>
+      <div class="button" style="background: #25dc7b" onclick="exportData()">Export counter data</div>
+    </div>
+  </div>
+</body>
+</html>
