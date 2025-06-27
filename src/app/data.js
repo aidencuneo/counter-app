@@ -37,8 +37,11 @@ export function setCount(name, value, additive, day) {
         values[day] = value;
 
     // Clear blank values
-    if (values[day] == 0)
-        delete values[day];
+    const keys = Object.keys(values);
+
+    for (let j = 0; j < keys.length; j++)
+        if (!values[keys[j]])
+            delete values[keys[j]];
 
     localStorage.setItem(`counter_${name}_values`, JSON.stringify(values));
     return values[day] ?? 0;
@@ -48,12 +51,10 @@ export function getCount(name, day) {
     name = asID(name);
     day ??= today();
 
-    let values = localStorage.getItem(`counter_${name}_values`);
+    let values = localStorage.getItem(`counter_${name}_values`) ?? '{}';
 
-    if (values)
-        return JSON.parse(values)[day] ?? 0;
-
-    return 0;
+    console.log(name, localStorage.getItem(`counter_${name}_values`));
+    return JSON.parse(values)[day] ?? 0;
 }
 
 export function getValues(name, from, to) {
@@ -138,12 +139,13 @@ export function importFromJSON(json) {
         const name = asID(counters[i][0]);
         const values = data[`${name}_values`];
 
-        localStorage.setItem(`counter_${name}_values`, JSON.stringify(values));
+        if (values)
+            localStorage.setItem(`counter_${name}_values`, JSON.stringify(values));
     }
 }
 
 export function clear() {
     for (let i = 0; i < localStorage.length; ++i)
         if (localStorage.key(i).startsWith('counter_'))
-            localStorage.removeItem(localStorage.key(i));
+            localStorage.removeItem(localStorage.key(i--));
 }

@@ -14,7 +14,6 @@ function renderCounter(name, value, background) {
     background ??= '#' + getRandHex(6);
     let colour = getLightOrDark(background.substring(1), '#eeeeee', '#121212');
 
-    console.log(countersDiv);
     countersDiv.innerHTML += `
 <div class="counter" style="background: ${background}; color: ${colour};">
     <div>
