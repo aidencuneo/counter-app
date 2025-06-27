@@ -41,7 +41,7 @@ export function setCount(name, value, additive, day) {
         delete values[day];
 
     localStorage.setItem(`counter_${name}_values`, JSON.stringify(values));
-    return values[day];
+    return values[day] ?? 0;
 }
 
 export function getCount(name, day) {
@@ -140,4 +140,10 @@ export function importFromJSON(json) {
 
         localStorage.setItem(`counter_${name}_values`, JSON.stringify(values));
     }
+}
+
+export function clear() {
+    for (let i = 0; i < localStorage.length; ++i)
+        if (localStorage.key(i).startsWith('counter_'))
+            localStorage.removeItem(localStorage.key(i));
 }

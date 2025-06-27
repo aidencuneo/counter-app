@@ -247,6 +247,14 @@ window.exportData = () => {
     URL.revokeObjectURL(url); // Release object URL
 }
 
+window.clearData = () => {
+    if (confirm('Are you sure you want to clear all counter data?'))
+        data.clear();
+
+    // Reset stats page
+    statsPageInit();
+}
+
 // Load counters
 let counters = data.getCounters();
 
