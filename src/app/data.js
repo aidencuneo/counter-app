@@ -36,6 +36,10 @@ export function setCount(name, value, additive, day) {
     else
         values[day] = value;
 
+    // Clear blank values
+    if (values[day] == 0)
+        delete values[day];
+
     localStorage.setItem(`counter_${name}_values`, JSON.stringify(values));
     return values[day];
 }
