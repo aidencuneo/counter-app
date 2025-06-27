@@ -45,15 +45,28 @@
 
     <div class="info-container">
       <div id="totalStatDiv">Total: 0</div>
+      <div id="longestStreakStatDiv">Longest Streak: 0</div>
+    </div>
+
+    <div class="info-container">
       <div id="averageStatDiv">Average: 0</div>
+      <div id="currentStreakStatDiv">Current Streak: 0</div>
+    </div>
+
+    <div class="info-container">
       <div id="maxStatDiv">Max: 0</div>
+      <div id="longestZeroStreakStatDiv">Longest Zero Streak: 0</div>
+    </div>
+
+    <div class="info-container">
       <div id="gradientStatDiv">Gradient: +0</div>
+      <div id="currentZeroStreakStatDiv">Current Zero Streak: 0</div>
     </div>
 
     <div class="button-container">
       <input type="file" accept="application/json" id="fileInput" style="display: none" onchange="importData()">
-      <div class="button" style="background: #a9d4ff" onclick="importPrompt()">Import counter data</div>
-      <div class="button" style="background: #25dc7b" onclick="exportData()">Export counter data</div>
+      <div class="button" style="background: #a9d4ff" onclick="importPrompt()">Import Data</div>
+      <div class="button" style="background: #25dc7b" onclick="exportData()">Export Data</div>
     </div>
   </div>
 </body>

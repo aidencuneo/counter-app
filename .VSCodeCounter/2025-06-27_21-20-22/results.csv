@@ -1,0 +1,11 @@
+"filename", "language", "HTML", "PostCSS", "JavaScript", "comment", "blank", "total"
+"/home/aiden/node/counter-app/src/app.js", "JavaScript", 0, 0, 218, 10, 65, 293
+"/home/aiden/node/counter-app/src/app/data.js", "JavaScript", 0, 0, 98, 2, 40, 140
+"/home/aiden/node/counter-app/src/app/stats.js", "JavaScript", 0, 0, 54, 3, 11, 68
+"/home/aiden/node/counter-app/src/index.html", "HTML", 64, 0, 0, 1, 9, 74
+"/home/aiden/node/counter-app/src/routes.js", "JavaScript", 0, 0, 31, 6, 12, 49
+"/home/aiden/node/counter-app/src/styles.css", "PostCSS", 0, 108, 0, 7, 23, 138
+"/home/aiden/node/counter-app/src/util/colourUtil.js", "JavaScript", 0, 0, 67, 2, 15, 84
+"/home/aiden/node/counter-app/src/util/dates.js", "JavaScript", 0, 0, 29, 0, 6, 35
+"/home/aiden/node/counter-app/src/util/util.js", "JavaScript", 0, 0, 4, 0, 2, 6
+"Total", "-", 64, 108, 501, 31, 183, 887

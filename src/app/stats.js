@@ -39,6 +39,29 @@ export async function drawStats(name, values) {
     averageStatDiv.innerText = 'Average: ' + round(average, 2);
     maxStatDiv.innerText = 'Max: ' + round(Math.max(...data), 2);
     gradientStatDiv.innerText = 'Gradient: ' + gradientSign + round(gradient, 2);
+
+    // Streaks
+    let longestStreak = 0;
+    let currentStreak = 0;
+    let longestZeroStreak = 0;
+    let currentZeroStreak = 0;
+
+    for (let i = 0; i < data.length; ++i) {
+        if (data[i]) {
+            ++currentStreak;
+            longestStreak = Math.max(longestStreak, currentStreak);
+            currentZeroStreak = 0;
+        } else {
+            ++currentZeroStreak;
+            longestZeroStreak = Math.max(longestZeroStreak, currentZeroStreak);
+            currentStreak = 0;
+        }
+    }
+
+    longestStreakStatDiv.innerText = 'Longest Streak: ' + longestStreak;
+    currentStreakStatDiv.innerText = 'Current Streak: ' + currentStreak;
+    longestZeroStreakStatDiv.innerText = 'Longest Zero Streak: ' + longestZeroStreak;
+    currentZeroStreakStatDiv.innerText = 'Current Zero Streak: ' + currentZeroStreak;
 }
 
 let lastChart;

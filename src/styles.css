@@ -44,7 +44,7 @@ body {
 }
 
 #page-links div {
-    padding: 15px;
+    padding: 12px;
     user-select: none;
     width: 100%;
 }
@@ -58,7 +58,7 @@ body {
     display: flex;
     justify-content: space-between;
     background: #a9d4ff;
-    padding: 15px 15px;
+    padding: 12px 15px;
     user-select: none;
 }
 
@@ -101,7 +101,7 @@ select {
     font: inherit;
     width: 100%;
     background: #a9d4ff;
-    padding: 15px;
+    padding: 12px;
     user-select: none;
     appearance: none;
     border: none;
@@ -119,14 +119,19 @@ select.date-selector {
 
 div.info-container {
     display: flex;
-    justify-content: space-evenly;
-    padding: 15px;
+    justify-content: space-between;
+    padding: 5px 30px;
 }
 
 div.button-container {
     display: flex;
+    margin-top: 20px;
 }
 
 div.button-container .button {
     flex-grow: 1;
+}
+
+canvas#statsCanvas {
+    margin-bottom: 15px;
 }
