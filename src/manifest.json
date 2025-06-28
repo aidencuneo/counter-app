@@ -1,7 +1,7 @@
 {
-  "name": "Business Spreadsheet",
-  "short_name": "Business",
-  "start_url": "/apps/business/",
+  "name": "Counter",
+  "short_name": "Counter",
+  "start_url": "/apps/counter/",
   "display": "standalone",
   "background_color": "#121212",
   "theme_color": "#121212",

@@ -13,12 +13,13 @@
   "type": "module",
   "description": "",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.15.4",
+    "@parcel/transformer-webmanifest": "^2.15.4",
     "chart.js": "^4.5.0",
     "parcel": "^2.15.4",
-    "regression": "^2.0.1"
-  },
-  "dependencies": {
+    "regression": "^2.0.1",
     "@fontsource/cal-sans": "^5.2.2",
     "@fontsource/material-icons": "^5.2.5"
-  }
+  },
+  "dependencies": {}
 }
