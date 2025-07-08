@@ -18,6 +18,7 @@ function renderCounter(name, value, background) {
 <div class="counter" style="background: ${background}; color: ${colour};">
     <div>
         <span class="material-icons delete-icon" onclick="confirm('Are you sure you want to delete &quot;${name}&quot;?') ? deleteCounter(this) : 0;">delete</span>
+        <span class="material-icons refresh-icon" onclick="resetColour(this)">refresh</span>
         <span onclick="changeCounterIndex(this)">${name}</span>
     </div>
     <div class="value-container">
@@ -99,6 +100,18 @@ window.changeCounterValue = counter => {
         return;
 
     setCounterValue(counter, data.setCount(name, +newValue, false, selectedDate()));
+}
+
+window.resetColour = counter => {
+    counter = elementBacktrack(counter, 2);
+    const index = getCounterIndex(counter);
+
+    // Reset colour
+    counters[index][1] = '#' + getRandHex(6);
+    data.saveCounters(counters);
+
+    // Rerender counters
+    countersPageInit();
 }
 
 window.addCounter = () => {

@@ -87,8 +87,11 @@ export function getValues(name, from, to) {
         filtered[dateStr] = values[dateStr] ?? 0;
     }
 
-    console.log(values);
-    console.log(filtered);
+    console.log(Object.keys(values).length);
+    console.log(Object.keys(filtered).length);
+
+    // console.log(values);
+    // console.log(filtered);
 
     return filtered;
 }

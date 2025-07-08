@@ -85,7 +85,14 @@ body {
 .delete-icon {
     vertical-align: middle;
     padding-bottom: 0.11em;
-    padding-right: 10px;
+    padding-right: 5px;
+    font-size: 24px;
+}
+
+.refresh-icon {
+    vertical-align: middle;
+    padding-bottom: 0.11em;
+    padding-right: 15px;
     font-size: 24px;
 }
 
@@ -101,6 +108,7 @@ select {
     font: inherit;
     width: 100%;
     background: #a9d4ff;
+    color: #121212;
     padding: 12px;
     user-select: none;
     appearance: none;
@@ -113,6 +121,7 @@ select#timeSelector {
 
 select.date-selector {
     text-align: center;
+    text-align-last: center; /* For IOS */
     font-size: 22px;
     /* font-weight: bold; */
 }

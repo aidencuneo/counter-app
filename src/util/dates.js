@@ -4,7 +4,8 @@ export function today() {
 
 export function dateToStr(date) {
     let month = ('' + (date.getMonth() + 1)).padStart(2, '0');
-    return `${date.getFullYear()}-${month}-${date.getDate()}`;
+    let datePadded = ('' + date.getDate()).padStart(2, '0');
+    return `${date.getFullYear()}-${month}-${datePadded}`;
 }
 
 export function addDays(str, days) {
